@@ -96,7 +96,7 @@ body {
 
 .link.nav {
   color: var(--secondary-color);
-  display: inline-block;
+  display: block;
 }
 .link.nav.current {
   color: var(--accent-color);
