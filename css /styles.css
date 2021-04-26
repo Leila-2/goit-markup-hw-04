@@ -7,6 +7,7 @@
   --prime-bg: #e5e5e5;
   --secondary-bg: #f5f4fa;
   --dark-bg: #2f303a;
+  --social-icon-color: #afb1b8;
 }
 html {
   box-sizing: border-box;
@@ -64,6 +65,7 @@ body {
   margin-right: auto;
 }
 
+/* Хедер */
 .nav.list {
   display: inline-flex;
 }
@@ -74,6 +76,23 @@ body {
 
 .contacts-item:not(:last-child) {
   margin-right: 50px;
+}
+.contacts-link {
+  display: flex;
+  align-items: center;
+}
+.contacts-icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--primary-color);
+}
+.contacts-icon.phone {
+  width: 10px;
+  height: 16px;
+}
+.link:hover .contacts-icon {
+  fill: var(--accent-color);
 }
 
 .page-header .container {
@@ -129,6 +148,7 @@ body {
 .dark-bg {
   background-color: var(--dark-bg);
 }
+/* Hero section */
 .hero-section {
   margin-left: auto;
   margin-right: auto;
@@ -181,9 +201,9 @@ body {
 .button:focus {
   background-color: var(--accent-color);
 }
+
+/* Особенности */
 .hidden-title {
-  /* visibility: hidden;
-  height: 0; */
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
@@ -198,6 +218,55 @@ body {
   color: var(--secondary-color);
   font-weight: 700;
   margin-bottom: 10px;
+}
+.first-feature::before {
+  content: "";
+  width: 270px;
+  height: 120px;
+  background-image: url(../images/svg/antenna.svg);
+  display: block;
+  background-position: right 100px top 25px;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  background-color: var(--secondary-bg);
+  margin-bottom: 30px;
+}
+
+.second-feature::before {
+  content: "";
+  width: 270px;
+  height: 120px;
+  background-image: url(../images/svg/clock.svg);
+  display: block;
+  background-position: right 100px top 25px;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  background-color: var(--secondary-bg);
+  margin-bottom: 30px;
+}
+.third-feature::before {
+  content: "";
+  width: 270px;
+  height: 120px;
+  background-image: url(../images/svg/diagram.svg);
+  display: block;
+  background-position: right 100px top 25px;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  background-color: var(--secondary-bg);
+  margin-bottom: 30px;
+}
+.fourth-feature::before {
+  content: "";
+  width: 270px;
+  height: 120px;
+  background-image: url(../images/svg/astronaut.svg);
+  display: block;
+  background-position: right 100px top 25px;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  background-color: var(--secondary-bg);
+  margin-bottom: 30px;
 }
 
 .text {
@@ -273,6 +342,68 @@ body {
   /* padding-bottom: 30px; */
   margin-bottom: 0;
 }
+/* Иконки соц-сетей */
+.social-icons {
+  display: inline-flex;
+  padding-bottom: 30px;
+}
+.social-icons-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-icons-svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--social-icon-color);
+}
+.social-icons-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-icons-link:hover .social-icons-svg,
+.social-icons-link:focus .social-icons-svg {
+  fill: #fff;
+}
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background-color: var(--accent-color);
+}
+
+/* Постоянные клиенты */
+.clients-list {
+  display: flex;
+}
+.clients-link {
+  border: 1px solid var(--social-icon-color);
+  border-radius: 4px;
+  display: block;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.clients-link:hover .clients-svg,
+.clients-link:focus .clients-svg {
+  fill: var(--accent-color);
+}
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-color);
+}
+.clients-svg {
+  width: 106px;
+  height: 60px;
+  fill: var(--social-icon-color);
+}
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* Футер */
 
 .dark-bg.footer {
   padding-top: 60px;
@@ -285,6 +416,41 @@ body {
 .footer-item {
   margin-top: 9px;
 }
+.third-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+/* Иконки футера */
+.footer-icons-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-icons-svg {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+.footer-icons-link:hover {
+  background-color: var(--accent-color);
+}
+.footer-container {
+  display: inline-flex;
+  align-items: baseline;
+}
+.address-container {
+  margin-right: 70px;
+}
+/* Портфолио */
 .button-menu {
   background: var(--secondary-bg);
   border-radius: 4px;
@@ -317,8 +483,6 @@ body {
   margin-bottom: 50px;
 }
 .portfolio-text {
-  /* margin-left: 24px;
-  margin-top: 20px; */
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 20px;
@@ -331,8 +495,6 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--secondary-color);
-  /* margin-top: 20px; */
-  /* margin-left: 24px; */
   margin-bottom: 0;
 }
 .portfolio-item {
@@ -354,7 +516,10 @@ body {
   min-height: 404px;
   border-top: none;
 }
-
+.portfolio-card:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .portfolio-card:nth-child(3n) {
   margin-right: 0;
 }
