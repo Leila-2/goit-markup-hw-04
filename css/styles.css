@@ -56,7 +56,9 @@ body {
   /* padding-top: 32px;
   padding-bottom: 32px; */
 }
-
+.link.footer-text {
+  font-weight: 400;
+}
 .container {
   width: 1200px;
   padding-right: 15px;
@@ -146,10 +148,13 @@ body {
   letter-spacing: 0.03em;
   line-height: 1.19;
   margin-right: 93px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   /* display: inline-block; */
 }
 .link.logo.white {
   color: #f5f4fa;
+  padding: 0;
 }
 .logo-part {
   color: var(--accent-color);
@@ -315,9 +320,12 @@ body {
   margin-right: 30px;
   flex-basis: calc((100% - 4 * 30px) / 4);
 }
+.gallery-item:not(:last-child) {
+  margin-right: 30px;
+}
 
 .gallery-item {
-  margin-right: 30px;
+  /* margin-right: 30px; */
   flex-basis: calc((100% - 3 * 30px) / 3);
 }
 
@@ -332,12 +340,15 @@ body {
 }
 .team-cards {
   text-align: center;
-  margin-right: 30px;
+  /* margin-right: 30px; */
   flex-basis: calc((100% - 4 * 30px) / 4);
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+.team-cards:not(:last-child) {
+  margin-right: 30px;
 }
 .card-text {
   padding: 30px;
@@ -459,7 +470,13 @@ body {
   height: 20px;
   fill: #ffffff;
 }
-.footer-icons-link:hover {
+
+.footer-icons-link:hover .social-icons-svg,
+.footer-icons-link:focus .social-icons-svg {
+  fill: #fff;
+}
+.footer-icons-link:hover,
+.footer-icons-link:focus {
   background-color: var(--accent-color);
 }
 
@@ -504,6 +521,7 @@ body {
 .list.menu-item {
   justify-content: center;
   margin-bottom: 50px;
+  margin-right: 0;
 }
 .portfolio-text {
   padding-left: 24px;
@@ -536,7 +554,7 @@ body {
   border: 1px solid #eeeeee;
   width: 370px;
   margin-bottom: 30px;
-  min-height: 404px;
+  /* min-height: 404px; */
   border-top: none;
 }
 /* .portfolio-card:hover,
